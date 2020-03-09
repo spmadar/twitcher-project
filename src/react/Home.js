@@ -2,7 +2,7 @@ import React from "react";
 import { LoginForm, Menu } from "./components";
 import { userIsNotAuthenticated } from "./HOCs";
 import { Link } from "react-router-dom";
-import MessageCard from './components/MessageCard'
+
 
 class Home extends React.Component {
   render() {
