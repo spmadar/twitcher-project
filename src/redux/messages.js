@@ -15,25 +15,23 @@ import {
   export const createpost = postData => dispatch => {
     dispatch(CREATEPOST.START());
   
-    return fetch(url + "/login", {
+    return fetch(url + "/messages", {
       method: "POST",
       headers: jsonHeaders,
       body: JSON.stringify(postData)
     })
       .then(handleJsonResponse)
-      .then(result => dispatch(LOGIN.SUCCESS(result)))
-      .catch(err => Promise.reject(dispatch(LOGIN.FAIL(err))));
+      .then(result => dispatch(CREATEPOST.SUCCESS(result)))
+      .catch(err => Promise.reject(dispatch(CREATEPOST.FAIL(err))));
   };
   
 
   
   export const reducers = {
-    login: createReducer(getInitStateFromStorage("login", asyncInitialState), {
-      ...asyncCases(LOGIN),
-      [LOGOUT.SUCCESS.toString()]: (state, action) => asyncInitialState
+    login: createReducer(getInitStateFromStorage("createpost", asyncInitialState), {
+      ...asyncCases(CREATEPOST),
+      [CREATEPOST.SUCCESS.toString()]: (state, action) => asyncInitialState
     }),
-    logout: createReducer(asyncInitialState, {
-      ...asyncCases(LOGOUT)
-    })
+    
   };
   

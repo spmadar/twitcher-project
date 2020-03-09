@@ -1,7 +1,7 @@
 import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
-import {user}  from "../../../redux/users";
+import {user}  from "../../redux/users";
 
 
 class RegistrationForm extends React.Component {
