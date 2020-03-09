@@ -1,15 +1,15 @@
 import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
-import { login } from "../../redux";
-import "./LoginForm.css";
+import {user}  from "../../redux/users";
 
-class LoginForm extends React.Component {
+
+class RegistrationForm extends React.Component {
   state = { username: "", password: "" };
 
-  handleLogin = e => {
+  handleSignUp = e => {
     e.preventDefault();
-    this.props.login(this.state);
+    this.props.createuser(this.state);
   };
 
   handleChange = e => {
@@ -20,7 +20,7 @@ class LoginForm extends React.Component {
     const { loading, error } = this.props;
     return (
       <React.Fragment>
-        <form id="login-form" onSubmit={this.handleLogin}>
+        <form id="registration-form" onSubmit={this.handleLogin}>
           <label htmlFor="username">Username</label>
           <input
             type="text"
@@ -29,17 +29,22 @@ class LoginForm extends React.Component {
             required
             onChange={this.handleChange}
           />
-          <label htmlFor="password">Password</label>
+          <label htmlFor="display name">Display Name</label>
           <input
-            type="password"
-            name="password"
+            type="display"
+            name="display"
             required
             onChange={this.handleChange}
           />
+          <label htmlFor="password">Password</label>
+          <input
+            type="text"
+            name="password"
+            onChange={this.handleChange}
+        />
           <button type="submit" disabled={loading}>
-            Login
+            Sign Up!
           </button>
-         
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
@@ -48,11 +53,13 @@ class LoginForm extends React.Component {
   }
 }
 
-export default connect(
+export default 
+connect(
   state => ({
-    result: state.auth.login.result,
-    loading: state.auth.login.loading,
-    error: state.auth.login.error
+    result: state.user.result,
+    loading: state.user.loading,
+    error: state.user.error
   }),
-  { login }
-)(LoginForm);
+    { user }
+)
+(RegistrationForm);
