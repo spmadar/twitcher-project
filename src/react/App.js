@@ -9,6 +9,7 @@ class App extends React.Component {
     return (
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path= "/signup" component={RegistrationForm}/>
         <Route exact path="/profiles/:username" component={Profile} />
         <Route path="*" component={NotFound} />
       </Switch>
