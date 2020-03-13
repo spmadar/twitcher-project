@@ -21,4 +21,5 @@ export const store = configureStore({
 // registers a function to be called on state changes
 store.subscribe(() => {
   localStorage.setItem("login", JSON.stringify(store.getState().auth.login));
+ 
 });

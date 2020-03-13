@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import Profile from "./Profile";
 import NotFound from "./NotFound";
+import RegistrationForm from "./components/RegistrationForm";
 
 class App extends React.Component {
   render() {
