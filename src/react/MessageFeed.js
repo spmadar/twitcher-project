@@ -35,7 +35,7 @@ class MessageFeed extends React.Component {
                 <CreatePost />
                 <MessageCard />
                 <MessageCard />
-                
+                <MessageCard />
         </div>
         </>
     ) 
