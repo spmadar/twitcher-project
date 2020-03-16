@@ -25,13 +25,28 @@ import {
       .catch(err => Promise.reject(dispatch(CREATEPOST.FAIL(err))));
   };
   
+  const GETMESSAGES = createActions("getmessages");
+  export const getmessages = messageData => dispatch => {
+      dispatch(GETMESSAGES.START());
+
+      return fetch(url + "/messages", {
+          method: "GET",
+          headers: jsonHeaders,
+          body: JSON.stringify(messageData)
+      })
+        
+      .then(handleJsonResponse)
+      .then(result => dispatch(GETMESSAGES.SUCCESS(result)))
+      .catch(err => Promise.reject(dispatch(GETMESSAGES.FAIL(err))));
+  }
 
   
   export const reducers = {
-    login: createReducer(getInitStateFromStorage("createpost", asyncInitialState), {
+    createpost: createReducer(getInitStateFromStorage("createpost", asyncInitialState), {
       ...asyncCases(CREATEPOST),
-      [CREATEPOST.SUCCESS.toString()]: (state, action) => asyncInitialState
+    //   [CREATEPOST.SUCCESS.toString()]: (state, action) => asyncInitialState
     }),
-    
-  };
-  
+    getmessages: createReducer(getInitStateFromStorage("getmessages", asyncInitialState), {
+        ...asyncCases(GETMESSAGES),
+  })
+}
