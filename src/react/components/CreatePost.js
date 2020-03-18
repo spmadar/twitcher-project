@@ -4,12 +4,10 @@ import { connect } from "react-redux";
 import {createpost} from "../../redux/messages";
 
 class CreatePost extends React.Component {
-    state = {message: {
-        id: 0,
-        text: "",
-        username: "",
-        createdAt: ""
-    }}
+    state = {
+        text: ""
+        
+    }
 
     handlePost = e => {
         e.preventDefault();
@@ -20,6 +18,25 @@ class CreatePost extends React.Component {
         this.setState({[this.state.message.text]: e.target.value})
     }
 
+
+    // export const addTodo = todoTitle => {
+    //     const newTodo = {
+    //         userId: 1,
+    //         id: Math.floor(Math.random()*1000),
+    //         title: todoTitle,
+    //         completed: false
+    //       }
+    //     return {
+    //         type: "ADD_TODO",
+    //         payload: newTodo
+    //     }
+    // }
+
+
+
+
+
+
     render() {
         return (
             <>
@@ -29,7 +46,7 @@ class CreatePost extends React.Component {
                     <label>create a post!</label>
                     <input />
                 </Form.Field>
-                <Button>post</Button>
+                <Button onClick={this.handle }>post</Button>
             </Form>
             </div>
           </>

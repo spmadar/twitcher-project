@@ -15,7 +15,7 @@ import {
   export const createpost = postData => dispatch => {
     dispatch(CREATEPOST.START());
   
-    return fetch(url + "/messages", {
+    return fetch(url, {
       method: "POST",
       headers: jsonHeaders,
       body: JSON.stringify(postData)
@@ -29,10 +29,10 @@ import {
   export const getmessages = messageData => dispatch => {
       dispatch(GETMESSAGES.START());
 
-      return fetch(url + "/messages", {
+      return fetch(url, {
           method: "GET",
           headers: jsonHeaders,
-          body: JSON.stringify(messageData)
+          // body: JSON.stringify(messageData)
       })
         
       .then(handleJsonResponse)
@@ -46,7 +46,7 @@ import {
       ...asyncCases(CREATEPOST),
     //   [CREATEPOST.SUCCESS.toString()]: (state, action) => asyncInitialState
     }),
-    getmessages: createReducer(getInitStateFromStorage("getmessages", asyncInitialState), {
+    getmessages: createReducer(asyncInitialState, {
         ...asyncCases(GETMESSAGES),
   })
 }

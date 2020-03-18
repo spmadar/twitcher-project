@@ -22,12 +22,12 @@ class MessageCard extends React.Component {
 
                             <Comment.Avatar id="avatar" as='a' src='http://4.bp.blogspot.com/-vaCzQpw7YFU/Tq5oF9MLwQI/AAAAAAAADM8/jBjlL-ZkA9g/s1600/Beautiful_fish_pictures_wallpapers_Beautiful_Fish_Animals_Under_water_www.picturepool.blogspot.com_fish.jpg' />
                              <div id="content">
-                                <Comment.Author >Stevie Feliciano</Comment.Author>
+                                <Comment.Author > {this.props.username}</Comment.Author>
                                     <Comment.Metadata>
-                                        <div>2 days ago</div>
+                                        {this.props.createdAt}
                                     </Comment.Metadata>
                                         <Comment.Text>
-                                        hello
+                                        {this.props.text}
                                         </Comment.Text>
                             </div>
                         </Comment.Content>
