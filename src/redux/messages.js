@@ -8,17 +8,22 @@ import {
     createActions,
     createReducer
   } from "./helpers";
+// import authWrapper from "redux-auth-wrapper/authWrapper";
   
   const url = domain + "/messages";
   
   const CREATEPOST = createActions("createpost");
-  export const createpost = postData => dispatch => {
+  export const createpost = messagetext => (dispatch, getState) => {
     dispatch(CREATEPOST.START());
   
+    const token = getState().auth.login.result.token;
+   // console.log(token)
+    console.log(messagetext)
+
     return fetch(url, {
       method: "POST",
-      headers: jsonHeaders,
-      body: JSON.stringify(postData)
+      headers: { Authorization: "Bearer " + token, ...jsonHeaders },
+      body: JSON.stringify({text: messagetext})
     })
       .then(handleJsonResponse)
       .then(result => dispatch(CREATEPOST.SUCCESS(result)))
