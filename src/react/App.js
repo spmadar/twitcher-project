@@ -6,8 +6,8 @@ import NotFound from "./NotFound";
 import MessageFeed from "./MessageFeed";
 import RegistrationForm from "./components/RegistrationForm";
 import 'semantic-ui-css/semantic.min.css';
-import styled from 'styled-components';
-import profileImage from '../img'
+// import styled from 'styled-components';
+
 
 class App extends React.Component {
     state = {
@@ -38,7 +38,7 @@ class App extends React.Component {
       }
     ]
   }
-  
+
   render() {
     return (
       <Switch>

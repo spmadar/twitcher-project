@@ -2,6 +2,7 @@ import React from "react";
 import { LoginForm, Menu } from "./components";
 import { userIsNotAuthenticated } from "./HOCs";
 import { Link } from "react-router-dom";
+import "./Home.css";
 
 
 class Home extends React.Component {

@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/tay6gha.css");
 #menu {
   background-color: lightskyblue;
   display: flex;
@@ -6,7 +7,11 @@
   padding: 0 1em;
   border-radius: 1em;
 }
-
+.h1 {
+  font-family: mason-serif, sans-serif;
+font-style: normal;
+font-weight: 400; 
+}
 #menu-links {
   display: flex;
   padding-left: 1em;
