@@ -13,7 +13,8 @@ export const store = configureStore({
   reducer: {
     router: connectRouter(history),
     auth: combineReducers(authReducers),
-    user: combineReducers(userReducers)
+    user: combineReducers(userReducers),
+    messages: combineReducers(messageReducers)
   },
   preloadedState: {},
   devTools: process.env.NODE_ENV !== "production"
@@ -21,5 +22,6 @@ export const store = configureStore({
 // registers a function to be called on state changes
 store.subscribe(() => {
   localStorage.setItem("login", JSON.stringify(store.getState().auth.login));
- 
+  localStorage.setItem("createpost", JSON.stringify(store.getState().messages.createpost));
+  localStorage.setItem("getmessages", JSON.stringify(store.getState().messages.getmessages));
 });

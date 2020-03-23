@@ -12,6 +12,7 @@ class LoginForm extends React.Component {
     this.props.login(this.state);
   };
 
+  
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
