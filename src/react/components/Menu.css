@@ -1,17 +1,16 @@
 @import url("https://use.typekit.net/tay6gha.css");
-#menu {
-  background-color: lightskyblue;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1em;
-  border-radius: 1em;
-}
-.h1 {
-  font-family: mason-serif, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+#menu > h1 {
+font-family: mason-serif, sans-serif;
+font-weight: 700;
+font-size: 7em;
 font-style: normal;
-font-weight: 400; 
+position: relative;
+text-align: center;
+top: 100px;
 }
+
 #menu-links {
   display: flex;
   padding-left: 1em;
