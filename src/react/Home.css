@@ -1,0 +1,44 @@
+@import url("https://use.typekit.net/tay6gha.css");
+h2 {
+    font-family: cora, sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: medium;
+    text-align: center;
+    position: relative;    
+    top: 0em;
+    margin: 0em;
+}
+p {
+    font-size: 10px;
+    font-family: cora, sans-serif;
+    position: absolute;
+    left: 39.5%;
+    top: 450px;
+}
+
+ a {
+    padding-right: 0.5em;
+  cursor: pointer;
+  font-family: rig-shaded-light-face, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  color: black;
+  line-height: 1.2;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
+  border-radius: 25px;
+  border: 3px solid #00B98A;
+  position: absolute;
+  left: 41%;
+  top: 30%;
+  }
+   a:hover {
+       background-color: #00B98A;
+       color: white;
+   }
