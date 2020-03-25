@@ -4,7 +4,7 @@ import Home from "./Home";
 import Profile from "./Profile";
 import NotFound from "./NotFound";
 import MessageFeed from "./MessageFeed";
-import Signup from "./Signup";
+import Signup from "./components/Signup";
 import 'semantic-ui-css/semantic.min.css';
 
 class App extends React.Component {
