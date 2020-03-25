@@ -8,7 +8,8 @@ font-size: 7em;
 font-style: normal;
 position: relative;
 text-align: center;
-top: 100px;
+top: 20px;
+text-shadow: -22px -9px 10px rgba(206,89,55,0), 4px 4px 8px rgba(0,0,0,0.64);
 }
 
 #menu-links {
@@ -16,9 +17,4 @@ top: 100px;
   padding-left: 1em;
 }
 
-#menu-links a {
-  padding-right: 0.5em;
-  color: darkblue;
-  text-decoration: underline;
-  cursor: pointer;
-}
+

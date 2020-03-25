@@ -15,7 +15,7 @@ class Home extends React.Component {
           If I’m to choose between one evil and another, I’d rather not choose at all."</h2>
         <LoginForm />
         
-        <button type="signup"> <Link to="/signup">Sign Up!</Link></button>
+         <Link to="/signup">Create An Account</Link>
       </>
     );
   }
