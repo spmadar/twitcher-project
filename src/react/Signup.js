@@ -5,7 +5,9 @@ import { RegistrationForm } from "./components"
 class Signup extends React.Component{
     render(){
         return(
+            <>
             <RegistrationForm/>
+            </>
         )
     }
     
