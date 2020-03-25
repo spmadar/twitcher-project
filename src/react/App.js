@@ -4,6 +4,7 @@ import Home from "./Home";
 import Profile from "./Profile";
 import NotFound from "./NotFound";
 import MessageFeed from "./MessageFeed";
+import Signup from "./components/Signup";
 import RegistrationForm from "./components/RegistrationForm";
 import 'semantic-ui-css/semantic.min.css';
 // import styled from 'styled-components';
