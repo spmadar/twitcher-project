@@ -4,7 +4,9 @@ import { combineReducers } from "redux";
 import { connectRouter } from "connected-react-router";
 import { reducers as authReducers } from "./auth";
 import { reducers as userReducers } from "./users";
+import { reducers as messageReducers} from "./messages";
 export * from "./auth";
+export * from "./users";
 export const history = createBrowserHistory({
   basename: process.env.PUBLIC_URL
 });

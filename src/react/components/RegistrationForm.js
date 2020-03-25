@@ -1,12 +1,12 @@
 import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
-import { user } from "../../redux/users";
+import { createUser } from "../../redux";
 class RegistrationForm extends React.Component {
-    state = { username: "", password: "" };
+    state = { username: "", password: "", displayName:"" };
     handleSignUp = e => {
         e.preventDefault();
-        this.props.createuser(this.state);
+        this.props.createUser(this.state);
     };
     handleChange = e => {
         this.setState({ [e.target.name]: e.target.value });
@@ -15,7 +15,7 @@ class RegistrationForm extends React.Component {
         const { loading, error } = this.props;
         return (
             <React.Fragment>
-                <form id="registration-form" onSubmit={this.handleLogin}>
+                <form id="registration-form" onSubmit={this.handleSignUp}>
                     <label htmlFor="username">Username</label>
                     <input
                         type="text"
@@ -27,7 +27,7 @@ class RegistrationForm extends React.Component {
                     <label htmlFor="display name">Display Name</label>
                     <input
                         type="display"
-                        name="display"
+                        name="displayName"
                         required
                         onChange={this.handleChange}
                     />
@@ -39,7 +39,7 @@ class RegistrationForm extends React.Component {
                     />
                     <button type="submit" disabled={loading}>
                         Sign Up!
-          </button>
+                    </button>
                 </form>
                 {loading && <Spinner name="circle" color="blue" />}
                 {error && <p style={{ color: "red" }}>{error.message}</p>}
@@ -50,10 +50,10 @@ class RegistrationForm extends React.Component {
 export default
     connect(
         state => ({
-            result: state.user.result,
-            loading: state.user.loading,
-            error: state.user.error
+            result: state.user.createUser.result,
+            loading: state.user.createUser.loading,
+            error: state.user.createUser.error
         }),
-        { user }
+        { createUser }
     )
         (RegistrationForm);
