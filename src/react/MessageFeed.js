@@ -10,6 +10,7 @@ class MessageFeed extends React.Component {
             {<Menu isAuthenticated={this.props.isAuthenticated}/>}
             <CreatePost />
             <ListOfMessages />
+    
             </>
         )
     }
