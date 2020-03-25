@@ -21,8 +21,10 @@ class RegistrationForm extends React.Component {
     const { loading, error } = this.props;
     return (
       <React.Fragment>
+        <div className="regpage">
+          <h1>Create Your Account</h1>
         <form id="registration-form" onSubmit={this.handleLogin}>
-          <label htmlFor="username" id= "user">Username, or email address</label>
+          <label htmlFor="username" id= "reguser">Username, or email address</label>
           <input
             id="input"
             type="text"
@@ -31,7 +33,7 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
-          <label htmlFor="display name" id="display">Display Name</label>
+          <label htmlFor="display name" id="regdisp">Display Name</label>
           <input
             id="input"
             type="display"
@@ -39,21 +41,21 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
-          <label htmlFor="password" id="pass">Password</label>
+          <label htmlFor="password" id="regpass">Password</label>
           <input
             id="input"
             type="text"
             name="password"
             onChange={this.handleChange}
         />
-          <button type="submit" id="button" disabled={loading}>
+          <button type="submit" class="glow-on-hover" disabled={loading}>
             Sign Up
           </button>
         </form>
         {loading && <Spinner name="circle" color="blue" />}
-        {error && <p style={{ color: "red" }}>{error.message}</p>}
-       
+        {error && <p style={{ color: "red" }}>{error.message}</p>} </div>
       </React.Fragment>
+       
     );
   }
 }
