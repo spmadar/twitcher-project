@@ -4,7 +4,7 @@ import Home from "./Home";
 import Profile from "./Profile";
 import NotFound from "./NotFound";
 import MessageFeed from "./MessageFeed";
-import Signup from "./Signup";
+import RegistrationForm from "./components/RegistrationForm";
 import 'semantic-ui-css/semantic.min.css';
 // import styled from 'styled-components';
 
@@ -43,14 +43,13 @@ class App extends React.Component {
     return (
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path= "/signup" component={Signup}/>
-        <Route path="/profiles/:username" component={Profile} />
-        <Route path="/messagefeed" component={MessageFeed} />
+        <Route exact path= "/signup" component={RegistrationForm}/>
+        <Route exact path="/profiles/:username" component={Profile} />
+        <Route exact path="/messagefeed" component={MessageFeed} />
         <Route path="*" component={NotFound} />
       </Switch>
     );
   }
 }
-
 
 export default App;
