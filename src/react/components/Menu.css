@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 #menu > h1 {
+color: white;
 font-family: mason-serif, sans-serif;
 font-weight: 700;
 font-size: 7em;
