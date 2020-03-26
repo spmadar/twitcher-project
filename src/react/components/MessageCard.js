@@ -7,11 +7,9 @@ import "./MessageCard.css";
 class MessageCard extends React.Component {
     render() {
         return (
-            <div>
+            <div class="msgcard">
                 <Comment.Group id="container">
                     <Comment>
-
-
                         <Comment.Content>
                             <Button id="likebutton" as='div' labelPosition='right' size='tiny'>
                                 <Button color='green' size="mini">
