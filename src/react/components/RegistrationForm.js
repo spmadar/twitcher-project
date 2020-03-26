@@ -26,7 +26,7 @@ class RegistrationForm extends React.Component {
         <form id="registration-form" onSubmit={this.handleLogin}>
           <label htmlFor="username" id= "reguser">Username, or email address</label>
           <input
-            id="input"
+            id="rinput"
             type="text"
             name="username"
             autoFocus
@@ -35,7 +35,7 @@ class RegistrationForm extends React.Component {
           />
           <label htmlFor="display name" id="regdisp">Display Name</label>
           <input
-            id="input"
+            id="rinput"
             type="display"
             name="display"
             required
@@ -43,7 +43,7 @@ class RegistrationForm extends React.Component {
           />
           <label htmlFor="password" id="regpass">Password</label>
           <input
-            id="input"
+            id="rinput"
             type="text"
             name="password"
             onChange={this.handleChange}

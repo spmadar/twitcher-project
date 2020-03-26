@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/tay6gha.css");
 
-#menu > h1 {
+.h1 {
 color: white;
 font-family: mason-serif, sans-serif;
 font-weight: 700;
@@ -17,4 +17,6 @@ text-shadow: -22px -9px 10px rgba(206,89,55,0), 4px 4px 8px rgba(0,0,0,0.64);
   padding-left: 1em;
 }
 
-
+menu.logo {
+  width: 100%;
+}
