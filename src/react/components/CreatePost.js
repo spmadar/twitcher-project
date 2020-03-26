@@ -29,7 +29,7 @@ class CreatePost extends React.Component {
             <div id="createpost">
             <Form>
                 <Form.Field>
-                    <label>Speak your mind...</label>
+                    <label id="calltoaction">Speak your mind...</label>
                     <Input onChange={this.handlePost} />
                 </Form.Field>
                 <Button onClick={this.handleChange}>post</Button>
