@@ -17,7 +17,7 @@ class Profile extends React.Component {
         const profile = this.props.result.user
         return (
             <>
-                <Menu isAuthenticared={this.props.isAuthenticared} />
+                <Menu isAuthenticated={this.props.isAuthenticated} />
                 <ProfileCard 
                   pictureLocation={profile.pictureLocation}
                   username={profile.displayName} 

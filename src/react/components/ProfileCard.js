@@ -7,24 +7,30 @@ import {addpicture} from "../../redux/users";
 class ProfileCard extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            pictureLocation: this.props.pictureLocation
-        };
+        // this.state = {
+        //     pictureLocation: this.props.pictureLocation
+        // };
         this.handleAddPicture = this.handleAddPicture.bind(this);
     }
 
     handleAddPicture = event => {
         event.preventDefault();
         this.props.addpicture(event.target);
-        this.setState({ pictureLocation: this.props.pictureLocation });
+        // this.setState({ pictureLocation: this.props.pictureLocation });
     }
 
-
+    handleDisplayPicture = () => {
+        if (this.props.pictureLocation) {
+            return `https://kwitter-api.herokuapp.com/users/${this.props.username}/picture`
+        } else {
+            return null
+        }
+    }
 
     render() {
         return (
             <Card>
-                <Image src={`https://kwitter-api.herokuapp.com/users/${this.props.username}/picture`}
+                <Image src={this.handleDisplayPicture()}
                     wrapped
                     ui={false} />
                 <Card.Content>
