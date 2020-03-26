@@ -1,6 +1,5 @@
 import React from "react";
-import {Menu, CreatePost, ProfileCard} from "./components";
-// import ProfileCard from "./ProfileCard";
+import {Menu, CreatePost, ProfileCard, ProfileMessages} from "./components";
 import {connect} from "react-redux";
 import {getuser} from "../redux/users";
 import { userIsAuthenticated } from "./HOCs";
@@ -19,8 +18,12 @@ class Profile extends React.Component {
         return (
             <>
                 <Menu isAuthenticared={this.props.isAuthenticared} />
-                <ProfileCard username={profile.displayName} />
+                <ProfileCard 
+                  pictureLocation={profile.pictureLocation}
+                  username={profile.displayName} 
+                />
                 <CreatePost />
+                <ProfileMessages />
             </>
         );
     }
