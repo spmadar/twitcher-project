@@ -31,4 +31,6 @@ store.subscribe(() => {
   localStorage.setItem("login", JSON.stringify(store.getState().auth.login));
   localStorage.setItem("createpost", JSON.stringify(store.getState().messages.createpost));
   localStorage.setItem("getmessages", JSON.stringify(store.getState().messages.getmessages));
+  localStorage.setItem("getuser", JSON.stringify(store.getState().user.getuser));
+  localStorage.setItem("createuser", JSON.stringify(store.getState().user.createuser));
 });
