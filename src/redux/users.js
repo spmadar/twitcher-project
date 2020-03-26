@@ -2,7 +2,6 @@ import {
     domain,
     jsonHeaders,
     handleJsonResponse,
-    getInitStateFromStorage,
     asyncInitialState,
     asyncCases,
     createActions,
@@ -41,9 +40,8 @@ import {
 
   
   export const reducers = {
-    createuser: createReducer(getInitStateFromStorage("createuser", asyncInitialState), {
+    createuser: createReducer(asyncInitialState, {
       ...asyncCases(CREATEUSER),
-      [CREATEUSER.SUCCESS.toString()]: (state, action) => asyncInitialState
     }),
     getuser: createReducer(asyncInitialState, {
       ...asyncCases(GETUSER),
