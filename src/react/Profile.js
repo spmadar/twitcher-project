@@ -1,5 +1,7 @@
 import React from "react";
-import { Menu } from "./components";
+import {Menu, CreatePost, ProfileCard, ProfileMessages} from "./components";
+import {connect} from "react-redux";
+import {getuser} from "../redux/users";
 import { userIsAuthenticated } from "./HOCs";
 import { Card, Icon, Image } from 'semantic-ui-react'
 

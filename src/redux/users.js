@@ -2,7 +2,6 @@ import {
     domain,
     jsonHeaders,
     handleJsonResponse,
-    getInitStateFromStorage,
     asyncInitialState,
     asyncCases,
     createActions,
@@ -26,14 +25,44 @@ import {
       .catch(err => Promise.reject(dispatch(CREATEUSER.FAIL(err))));
   };
   
+  const GETUSER = createActions("getuser");
+  export const getuser = userData => dispatch => {
+    dispatch(GETUSER.START());
 
+    return fetch(url + "/" + userData, {
+      method: "GET",
+      headers: jsonHeaders
+    })
+      .then(handleJsonResponse)
+      .then(result => dispatch(GETUSER.SUCCESS(result)))
+      .then(err => Promise.reject(dispatch(GETUSER.FAIL(err))));
+  };
+
+  const ADDPICTURE = createActions("addpicture");
+  export const addpicture = (formTag) => (dispatch, getState) => {
+    dispatch(ADDPICTURE.START());
+
+    const username = getState().auth.login.result.username;
+    const token = getState().auth.login.result.token;
+
+    return fetch(url + "/" + username + "/picture", {
+      method: "PUT",
+      headers: {Authorization: "Bearer " + token, Accept: "application/json"},
+      body: new FormData(formTag)
+    })
+      .then(handleJsonResponse)
+      .then(result => dispatch(ADDPICTURE.SUCCESS(result)))
+      .catch(err => Promise.reject(dispatch(ADDPICTURE.FAIL(err))));
+  };
   
   export const reducers = {
-    createuser: createReducer(getInitStateFromStorage("createuser", asyncInitialState), {
+    createuser: createReducer(asyncInitialState, {
       ...asyncCases(CREATEUSER),
-      [CREATEUSER.SUCCESS.toString()]: (state, action) => asyncInitialState
     }),
-    // logout: createReducer(asyncInitialState, {
-    //   ...asyncCases(LOGOUT)
-    // })
+    getuser: createReducer(asyncInitialState, {
+      ...asyncCases(GETUSER),
+    }),
+    addpicture: createReducer(asyncInitialState, {
+      ...asyncCases(ADDPICTURE),
+    }),
   };
