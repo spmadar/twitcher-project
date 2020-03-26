@@ -1,6 +1,5 @@
 import React from "react";
 import { MessageCard} from ".";
-// import { userIsAuthenticated } from "./HOCs";
 import { getmessages } from "../../redux/messages";
 import { connect } from "react-redux";
 import "./ListOfMessages.css"
