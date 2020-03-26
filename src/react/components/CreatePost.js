@@ -1,37 +1,39 @@
 import React from 'react';
-import { Form, Button} from 'semantic-ui-react';
+import { Form, Button, Input} from 'semantic-ui-react';
 import { connect } from "react-redux";
 import {createpost} from "../../redux/messages";
 
 class CreatePost extends React.Component {
-    state = {message: {
-        id: 0,
-        text: "",
-        username: "",
-        createdAt: ""
-    }}
+    state = {
+        messagetext: ""
+        
+    }
+
+    
+    handleChange = e => {
+        e.preventDefault(); 
+        this.props.createpost(this.state.messagetext);
+        this.setState({messagetext: ""})
+    }
+
 
     handlePost = e => {
-        e.preventDefault();
-        this.props.createpost(this.state);
+        this.setState({ messagetext: e.target.value})
     }
 
-    handleChange = e => {
-        this.setState({[this.state.message.text]: e.target.value})
-    }
 
     render() {
         return (
             <>
-            <div id="textbox">
+            
             <Form>
                 <Form.Field>
                     <label>create a post!</label>
-                    <input />
+                    <Input onChange={this.handlePost} />
                 </Form.Field>
-                <Button>post</Button>
+                <Button onClick={this.handleChange}>post</Button>
             </Form>
-            </div>
+            
           </>
         )
     }
