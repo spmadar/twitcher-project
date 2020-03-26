@@ -24,14 +24,18 @@ class ListOfMessages extends React.Component {
           text={message.text}
           createdAt={new Date(message.createdAt).toDateString()}
           username={message.username}
-          //likes
+          likes={message.likes}
+          id={message.id}
           />
           
       )
     })
    }  
   }
-    
+  
+
+
+  
         // <div id="container">
         // <Menu isAuthenticated={this.props.isAuthenticated} />
         //     <h1> twitcher feed </h1>
@@ -42,9 +46,6 @@ class ListOfMessages extends React.Component {
         // </div>
       
     
-
-
-
 
 
 
