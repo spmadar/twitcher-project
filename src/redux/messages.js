@@ -13,7 +13,7 @@ import {
   const url = domain + "/messages";
   
   const CREATEPOST = createActions("createpost");
-  export const createpost = messagetext => (dispatch, getState) => {
+  const _createpost = messagetext => (dispatch, getState) => {
     dispatch(CREATEPOST.START());
   
     const token = getState().auth.login.result.token;
@@ -29,7 +29,12 @@ import {
       .then(result => dispatch(CREATEPOST.SUCCESS(result)))
       .catch(err => Promise.reject(dispatch(CREATEPOST.FAIL(err))));
   };
-  
+  export const createpost = messagetext => (dispatch) => {
+    dispatch(_createpost(messagetext))
+    .then(() => dispatch(getmessages()))
+  }
+
+
   const GETMESSAGES = createActions("getmessages");
   export const getmessages = messageData => dispatch => {
       dispatch(GETMESSAGES.START());

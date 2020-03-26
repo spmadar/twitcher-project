@@ -25,7 +25,8 @@ class ListOfMessages extends React.Component {
           text={message.text}
           createdAt={new Date(message.createdAt).toDateString()}
           username={message.username}
-          //likes
+          likes={message.likes}
+          id={message.id}
           />
           
       )
