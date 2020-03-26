@@ -1,6 +1,5 @@
 import React from "react";
 import { MessageCard} from ".";
-// import { userIsAuthenticated } from "./HOCs";
 import { getmessages } from "../../redux/messages";
 import { connect } from "react-redux";
 
@@ -33,7 +32,10 @@ class ListOfMessages extends React.Component {
     })
    }  
   }
-    
+  
+
+
+  
         // <div id="container">
         // <Menu isAuthenticated={this.props.isAuthenticated} />
         //     <h1> twitcher feed </h1>
@@ -44,9 +46,6 @@ class ListOfMessages extends React.Component {
         // </div>
       
     
-
-
-
 
 
 

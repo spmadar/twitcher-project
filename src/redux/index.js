@@ -12,6 +12,7 @@ export * from "./likes";
 export const history = createBrowserHistory({
   basename: process.env.PUBLIC_URL
 });
+
 export const store = configureStore({
   // add reducers to store
   reducer: {
@@ -24,7 +25,15 @@ export const store = configureStore({
   preloadedState: {},
   devTools: process.env.NODE_ENV !== "production"
 });
+
+
+
 // registers a function to be called on state changes
 store.subscribe(() => {
   localStorage.setItem("login", JSON.stringify(store.getState().auth.login));
+  localStorage.setItem("createpost", JSON.stringify(store.getState().messages.createpost));
+  localStorage.setItem("getmessages", JSON.stringify(store.getState().messages.getmessages));
+  localStorage.setItem("getuser", JSON.stringify(store.getState().user.getuser));
+  localStorage.setItem("createuser", JSON.stringify(store.getState().user.createuser));
+  localStorage.setItem("addpicture", JSON.stringify(store.getState().user.addpicture));
 });

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { login } from "../../redux";
 import "./LoginForm.css";
 
+
 class LoginForm extends React.Component {
   state = { username: "", password: "" };
 
@@ -22,25 +23,27 @@ class LoginForm extends React.Component {
     return (
       <React.Fragment>
         <form id="login-form" onSubmit={this.handleLogin}>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username" id="user">Username</label>
           <input
+            className="input"
             type="text"
             name="username"
             autoFocus
             required
             onChange={this.handleChange}
           />
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password" id="pass">Password</label>
           <input
+            className="input"
             type="password"
             name="password"
             required
             onChange={this.handleChange}
           />
-          <button type="submit" disabled={loading}>
+        
+          <button type="submit" id="logbutton" disabled={loading}>
             Login
           </button>
-         
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}

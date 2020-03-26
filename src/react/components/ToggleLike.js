@@ -12,9 +12,13 @@ class ToggleLike extends React.Component {
     };
 
     render() {
+        if (this.props.result === null) {
+            return null
+          }
         const isLiked = this.props.likes.find(
             like => like.username === this.props.loggedInUsername
         );
+        
         return (
             <Button
                 outline
@@ -28,6 +32,7 @@ class ToggleLike extends React.Component {
             </Button>
         );
     }
+    
 }
 
 const mapStateToProps = state => {
