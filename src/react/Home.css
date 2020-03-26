@@ -46,7 +46,7 @@ a:hover {
     color: white;
 }
 
-.homepage {
+#homepage {
     background-image: url("./img/witcher-splash.jpg");
     height: 100vh;
     background-size: cover;
