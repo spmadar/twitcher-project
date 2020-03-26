@@ -1,9 +1,9 @@
 import React from "react";
-import {Menu, CreatePost, ProfileCard} from "./components";
-// import ProfileCard from "./ProfileCard";
+import {Menu, CreatePost} from "./components";
+import ProfileCard from "./ProfileCard";
 import {connect} from "react-redux";
-import {getuser} from "../redux/users";
-import { userIsAuthenticated } from "./HOCs";
+import {getuser} from "..redux/users";
+import { userIsAuthenticated } from "../HOCs";
 
 class Profile extends React.Component {
     componentDidMount(){
@@ -29,9 +29,9 @@ class Profile extends React.Component {
 const mapStateToProps = state => {
     return {
         username: state.auth.login.result.username,
-        result: state.user.getuser.result,
-        loading: state.user.getuser.loading,
-        error: state.user.getuser.error
+        result: state.users.getuser.result,
+        loading: state.users.getuser.loading,
+        error: state.users.getuser.error
     }
 }
 
