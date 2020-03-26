@@ -5,3 +5,4 @@ export {default as MessageCard} from "./MessageCard";
 export {default as CreatePost} from "./CreatePost";
 export {default as ListOfMessages} from "./ListOfMessages";
 export {default as ProfileCard} from "./ProfileCard";
+export {default as ProfileMessages} from "./ProfileMessages";

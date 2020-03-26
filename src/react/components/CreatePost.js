@@ -2,6 +2,7 @@ import React from 'react';
 import { Form, Button, Input} from 'semantic-ui-react';
 import { connect } from "react-redux";
 import {createpost} from "../../redux/messages";
+import "./CreatePost.css"
 
 class CreatePost extends React.Component {
     state = {
@@ -24,17 +25,17 @@ class CreatePost extends React.Component {
 
     render() {
         return (
-            <>
             
+            <div id="createpost">
             <Form>
                 <Form.Field>
-                    <label>create a post!</label>
+                    <label id="calltoaction">Speak your mind...</label>
                     <Input onChange={this.handlePost} />
                 </Form.Field>
                 <Button onClick={this.handleChange}>post</Button>
             </Form>
-            
-          </>
+           </div> 
+          
         )
     }
 } 
