@@ -8,11 +8,9 @@ import ToggleLike from "./ToggleLike";
 class MessageCard extends React.Component {
     render() {
         return (
-            <div>
+            <div class="msgcard">
                 <Comment.Group id="container">
                     <Comment>
-
-
                         <Comment.Content>
                             <Button id="likebutton" as='div' labelPosition='right' size='tiny'>
                                 <p> Likes: {this.props.likes.length}</p>
