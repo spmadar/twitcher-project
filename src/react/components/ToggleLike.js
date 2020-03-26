@@ -15,9 +15,9 @@ class ToggleLike extends React.Component {
         if (this.props.result === null) {
             return null
           }
-        const isLiked = this.props.likes.find(
-            like => like.username === this.props.loggedInUsername
-        );
+        // const isLiked = this.props.likes.find(
+        //     like => like.username === this.props.loggedInUsername
+        // );
         
         return (
             <Button
@@ -28,7 +28,7 @@ class ToggleLike extends React.Component {
                 onClick={this.handleToggleLike}
             >
                 <FontAwesomeIcon icon={faThumbsUp} size="lg"></FontAwesomeIcon>{" "}
-                {isLiked ? "Unlike" : "Like"}
+                {/* {isLiked ? "Unlike" : "Like"} */}
             </Button>
         );
     }
