@@ -15,7 +15,7 @@ class MessageCard extends React.Component {
 
                         <Comment.Content>
                             <Button id="likebutton" as='div' labelPosition='right' size='tiny'>
-                                <p> Likes: {this.props.likes.length}</p>
+                                {/* <p> Likes: {this.props.likes.length}</p> */}
                                 <ToggleLike messageId={this.props.id} likes={this.props.likes} />
                             </Button>
 

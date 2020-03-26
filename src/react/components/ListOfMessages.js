@@ -32,21 +32,6 @@ class ListOfMessages extends React.Component {
     })
    }  
   }
-  
-
-
-  
-        // <div id="container">
-        // <Menu isAuthenticated={this.props.isAuthenticated} />
-        //     <h1> twitcher feed </h1>
-        //         <CreatePost />
-        //         <MessageCard />
-        //         <MessageCard />
-        //         <MessageCard />
-        // </div>
-      
-    
-
 
 
 const mapStateToProps = state => {
