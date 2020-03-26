@@ -3,15 +3,10 @@ import React from "react";
 import { connect } from "react-redux";
 import {createuser}  from "../../redux/users";
 import {Button, Form, Segment} from "semantic-ui-react";
+import "./RegistrationForm.css"
 
 class RegistrationForm extends React.Component {
   state = { username: "", displayName: "", password: "" };
-
-  // handleSignUp = e => {
-  //   e.preventDefault();
-  //   this.props.createuser(this.state);
-  // };
-
   handleChange = e => {
 
     this.setState({ [e.target.name]: e.target.value });
@@ -36,17 +31,18 @@ class RegistrationForm extends React.Component {
     }
   
     return (
+      
       <Segment inverted>
       <Form inverted>
         <Form.Group widths='equal'>
           <Form.Input name="username" fluid label='Username' placeholder='Username' onChange={this.handleChange} />
           <Form.Input name="displayName" fluid label='Display Name' placeholder='Display Name' onChange={this.handleChange}/>
-          <Form.Input fluid name="password" label='Password' placeholder='Password' onChange={this.handleChange}/>
+          <Form.Input name="password" fluid label='Password' placeholder='Password' onChange={this.handleChange}/>
         </Form.Group>
        
         <Button type='submit' onClick={this.handleSignUp}>Sign Up!</Button>
       </Form>
-    </Segment>
+    </Segment> 
     );
   }
 }

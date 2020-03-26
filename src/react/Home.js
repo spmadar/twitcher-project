@@ -8,7 +8,7 @@ import "./Home.css";
 class Home extends React.Component {
   render() {
     return (
-      <div id="homepage">
+      <div class="homepage">
 
         <Menu />
         <h2>"Evil is Evil. Lesser, greater, middling… <br/>
@@ -16,7 +16,7 @@ class Home extends React.Component {
           If I’m to choose between one evil and another, I’d rather not choose at all."</h2>
         <LoginForm />
         
-         <Link to="/signup">Create An Account</Link>
+         <Link to="/signup" id="createacc">Create An Account</Link>
       </div>
     );
   }
