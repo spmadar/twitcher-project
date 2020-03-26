@@ -8,7 +8,8 @@ import "./Home.css";
 class Home extends React.Component {
   render() {
     return (
-      <>
+      <div id="homepage">
+
         <Menu />
         <h2>"Evil is Evil. Lesser, greater, middling… <br/>
           Makes no difference. The degree is arbitrary. The definition is blurred. <br/>
@@ -16,7 +17,7 @@ class Home extends React.Component {
         <LoginForm />
         
          <Link to="/signup">Create An Account</Link>
-      </>
+      </div>
     );
   }
 }
