@@ -10,6 +10,7 @@ class Profile extends React.Component {
         this.props.getuser(this.props.username)
     }
 
+
     render() {
         if (this.props.result === null) {
             return null
