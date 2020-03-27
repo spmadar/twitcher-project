@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Card, Image, Modal, Form, Button } from "semantic-ui-react";
 import {addpicture} from "../../redux/users";
+import "./ProfileCard.css"
 
 
 class ProfileCard extends React.Component {

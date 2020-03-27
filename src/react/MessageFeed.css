@@ -7,6 +7,7 @@
 #msg:hover, #profile:hover, #logout:hover {
     text-decoration: underline;
     cursor: pointer;
+    color:white;
 }
 #msg {
     position: absolute;
