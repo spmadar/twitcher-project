@@ -1,9 +1,56 @@
+
+#menu-links {
+    font-size: 20px;
+    z-index: 100;
+}
+
+#msg:hover, #profile:hover, #logout:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#msg {
+    position: absolute;
+    top:5%;
+    left:10%;
+}
+#profile {
+    position: absolute;
+    top:5%;
+    left:3%;
+}
+
+#logout {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+
 #container {
     display: flex;
     flex-direction: column;
-    
-}
+ }
 
-h1 {
-    font-size: 55px;
+.menu > h1 {
+    font-family: mason-serif, sans-serif;
+    color: white;
+    font-size: 36px;
+    text-shadow: none;
+    background-color:transparent;
+    padding: 20px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+
+#home {
+    font-family: cora, sans-serif;
+    background-color: #DCE2DA;
 }
+#appbar  {
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    height: 70px;
+ }
