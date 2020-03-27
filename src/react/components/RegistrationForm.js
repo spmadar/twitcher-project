@@ -2,7 +2,7 @@ import React from "react";
 // import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import {createuser}  from "../../redux/users";
-import {Button, Form, Segment} from "semantic-ui-react";
+import {Form, Segment} from "semantic-ui-react";
 import "./RegistrationForm.css"
 
 class RegistrationForm extends React.Component {
@@ -33,14 +33,15 @@ class RegistrationForm extends React.Component {
     return (
       
       <Segment inverted>
+        <h1>Create Your Account</h1>
       <Form inverted>
         <Form.Group widths='equal'>
-          <Form.Input name="username" fluid label='Username' placeholder='Username' onChange={this.handleChange} />
-          <Form.Input name="displayName" fluid label='Display Name' placeholder='Display Name' onChange={this.handleChange}/>
-          <Form.Input name="password" fluid label='Password' placeholder='Password' onChange={this.handleChange}/>
+          <Form.Input id="reguser" name="username" fluid label='Username' placeholder='Username' onChange={this.handleChange} />
+          <Form.Input id="regdisp" name="displayName" fluid label='Display Name' placeholder='Display Name' onChange={this.handleChange}/>
+          <Form.Input id="regpass"name="password" fluid label='Password' placeholder='Password' onChange={this.handleChange}/>
         </Form.Group>
        
-        <Button type='submit' onClick={this.handleSignUp}>Sign Up!</Button>
+        <button type='submit' className="glow-on-hover" onClick={this.handleSignUp}>Sign Up!</button>
       </Form>
     </Segment> 
     );
