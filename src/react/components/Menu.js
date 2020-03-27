@@ -13,8 +13,8 @@ class Menu extends React.Component {
   render() {
     return (
    
-      <div class="menu" id="appbar">
-        <h1 class="logo">Twitcher</h1>
+      <div className="menu" id="appbar">
+        <h1 className="logo">Twitcher</h1>
         {this.props.isAuthenticated && (
           <div id="menu-links">
             <Link to="/messagefeed" id="msg">Message Feed</Link>

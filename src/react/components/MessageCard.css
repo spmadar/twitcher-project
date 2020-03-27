@@ -1,32 +1,78 @@
-.msgcard {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid black;
+
+
+#container {
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.64);
+    position: relative;
     margin-bottom: 5px;
     justify-content: center;
-    width: 400px;
+    width: 100%;
    
-    
 }
 #container.ui.comments {
-    left:50%;
+    left:23.5%;
+    margin: 10px;
+    width: 900px;
+    background-color: white;
+    border-radius: 10px;
 }
-.comment {
-    left:50%;
-}
+
 #avatar {
     width: 50px;
     height: 50px;
+    margin-right: 30px;
 }
 
 #likebutton {
-    position: absolute;
+    position: relative;
+    transform: translateX(450px) translateY(50px);
     
-   display: flex;
-   justify-content: flex-end;
 }
 
+.author {
+   transform: translateX(-15px) translateY(-35px); 
+}
 .content {
+    margin-top: 10px;
     margin-left: 60px;
     left:50%;
+}
+
+.text {
+    transform: translateX(3px) translateY(-20px); 
+}
+
+.metadata {
+    transform: translateX(60px) translateY(-35px); 
+    margin-bottom: 10px;
+}
+.like.btn.btn-outline-primary.btn-sm {
+    padding: 10px;
+    background: none;
+    border-radius: 50px;
+    border-color:#58828C;
+}
+
+.like.btn.btn-outline-primary.btn-sm:focus {
+    outline:0;
+}
+.like.btn.btn-outline-primary.btn-sm:hover {
+    background-color: #43A3DF;
+    cursor: pointer;
+}
+
+.svg-inline--fa.fa-thumbs-up.fa-w-16.fa-lg {
+    color:black;
+    cursor: pointer;
+    
+}
+.svg-inline--fa.fa-thumbs-up.fa-w-16.fa-lg:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+.path:hover {
+    background-color: #43A3DF;
+}
+
+path {
+    padding: 30px;
 }
