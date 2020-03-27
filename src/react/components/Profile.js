@@ -30,9 +30,9 @@ class Profile extends React.Component {
 const mapStateToProps = state => {
     return {
         username: state.auth.login.result.username,
-        result: state.users.getuser.result,
-        loading: state.users.getuser.loading,
-        error: state.users.getuser.error
+        result: state.user.getuser.result,
+        loading: state.user.getuser.loading,
+        error: state.user.getuser.error
     }
 }
 
