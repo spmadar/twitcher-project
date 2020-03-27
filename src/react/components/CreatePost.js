@@ -7,8 +7,7 @@ import "./CreatePost.css"
 class CreatePost extends React.Component {
     state = {
         messagetext: ""
-        
-    }
+    };
 
     
     handleChange = e => {

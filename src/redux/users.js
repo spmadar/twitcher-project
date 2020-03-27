@@ -8,6 +8,7 @@ import {
     createReducer
   } from "./helpers";
   import {push} from "connected-react-router";
+
   
   const url = domain + "/users";
   
@@ -62,7 +63,9 @@ import {
       .then(result => dispatch(ADDPICTURE.SUCCESS(result)))
       .catch(err => Promise.reject(dispatch(ADDPICTURE.FAIL(err))));
   };
-  
+
+
+
   export const reducers = {
     createuser: createReducer(asyncInitialState, {
       ...asyncCases(CREATEUSER),
@@ -73,4 +76,5 @@ import {
     addpicture: createReducer(asyncInitialState, {
       ...asyncCases(ADDPICTURE),
     }),
+
   };
