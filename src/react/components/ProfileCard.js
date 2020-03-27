@@ -8,10 +8,8 @@ import "./ProfileCard.css"
 class ProfileCard extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     pictureLocation: this.props.pictureLocation
-        // };
         this.handleAddPicture = this.handleAddPicture.bind(this);
+        // this.handleDeleteUser = this.handleDeleteUser.bind(this);
     }
 
     handleAddPicture = event => {
@@ -20,7 +18,7 @@ class ProfileCard extends React.Component {
         setTimeout(function(){
             window.location.reload();
           }, 1000);
-        // this.setState({ pictureLocation: this.props.pictureLocation });
+    
     }
 
     handleDisplayPicture = () => {
@@ -31,6 +29,7 @@ class ProfileCard extends React.Component {
         }
     }
 
+   
     render() {
         return (
             <Card>
@@ -53,6 +52,7 @@ class ProfileCard extends React.Component {
                             </Form>
                         </Modal.Actions>
                     </Modal>
+                    {/* <Button onClick= {this.props.deleteuser()}> delete account</Button> */}
                 </Card.Content>
             </Card>
         )
@@ -64,14 +64,13 @@ const mapStateToProps = state => {
         username: state.auth.login.result.username,
         createdAt: state.user.getuser.result.user.createdAt,
         pictureLocation: state.user.getuser.result.user.pictureLocation,
-        //   loading: state.user.deleteUser.loading,
-        //   error: state.user.deleteUser.error,
-        //   result: state.user.deleteUser.result
+       
     };
 };
 
 const mapDispatchToProps = {
-    addpicture
+    addpicture,
+   
 }
 
 

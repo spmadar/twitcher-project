@@ -17,7 +17,11 @@ class MessageCard extends React.Component {
                                 <ToggleLike messageId={this.props.id} likes={this.props.likes} />
                             </Button>
 
-                            <Comment.Avatar id="avatar" as='a' src='http://4.bp.blogspot.com/-vaCzQpw7YFU/Tq5oF9MLwQI/AAAAAAAADM8/jBjlL-ZkA9g/s1600/Beautiful_fish_pictures_wallpapers_Beautiful_Fish_Animals_Under_water_www.picturepool.blogspot.com_fish.jpg' />
+                            <Comment.Avatar id="avatar" as='a' src={`https://kwitter-api.herokuapp.com/users/${this.props.username}/picture`}
+                            onError={ e => (e.target.style.display ="none")}
+                            size='medium'
+                            wrapped= "true"
+                            />
                             <div id="content">
                                 <Comment.Author > {this.props.username}</Comment.Author>
                                 <Comment.Metadata>
