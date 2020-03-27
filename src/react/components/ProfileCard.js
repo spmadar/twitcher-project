@@ -17,6 +17,9 @@ class ProfileCard extends React.Component {
     handleAddPicture = event => {
         event.preventDefault();
         this.props.addpicture(event.target);
+        setTimeout(function(){
+            window.location.reload();
+          }, 1000);
         // this.setState({ pictureLocation: this.props.pictureLocation });
     }
 
