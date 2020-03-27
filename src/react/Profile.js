@@ -3,7 +3,7 @@ import {Menu, CreatePost, ProfileCard, ProfileMessages} from "./components";
 import {connect} from "react-redux";
 import {getuser} from "../redux/users";
 import { userIsAuthenticated } from "./HOCs";
-import { Card, Icon, Image } from 'semantic-ui-react'
+
 
 class Profile extends React.Component {
     componentDidMount(){
@@ -30,11 +30,19 @@ class Profile extends React.Component {
     }
 }
 
-export default userIsAuthenticated(Profile);
+const mapStateToProps = state => {
+    return {
+        username: state.auth.login.result.username,
+        result: state.users.getuser.result,
+        loading: state.users.getuser.loading,
+        error: state.users.getuser.error
+    }
+}
 
+const mapDispatchToProps = {
+    getuser
+}
 
+export default userIsAuthenticated(connect(mapStateToProps, mapDispatchToProps)(Profile));
 
-
-
-// export default CardExampleCard
 
