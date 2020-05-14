@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/twitcher-project/static/css/main.c95aa0cb.chunk.css",
+    "main.js": "/twitcher-project/static/js/main.bb6dc401.chunk.js",
+    "main.js.map": "/twitcher-project/static/js/main.bb6dc401.chunk.js.map",
+    "runtime-main.js": "/twitcher-project/static/js/runtime-main.66422fb8.js",
+    "runtime-main.js.map": "/twitcher-project/static/js/runtime-main.66422fb8.js.map",
+    "static/css/2.b4b72dba.chunk.css": "/twitcher-project/static/css/2.b4b72dba.chunk.css",
+    "static/js/2.c76b0104.chunk.js": "/twitcher-project/static/js/2.c76b0104.chunk.js",
+    "static/js/2.c76b0104.chunk.js.map": "/twitcher-project/static/js/2.c76b0104.chunk.js.map",
+    "index.html": "/twitcher-project/index.html",
+    "precache-manifest.1e6f7af939bd10b24f317f7e9c6aa624.js": "/twitcher-project/precache-manifest.1e6f7af939bd10b24f317f7e9c6aa624.js",
+    "service-worker.js": "/twitcher-project/service-worker.js",
+    "static/css/2.b4b72dba.chunk.css.map": "/twitcher-project/static/css/2.b4b72dba.chunk.css.map",
+    "static/css/main.c95aa0cb.chunk.css.map": "/twitcher-project/static/css/main.c95aa0cb.chunk.css.map",
+    "static/js/2.c76b0104.chunk.js.LICENSE.txt": "/twitcher-project/static/js/2.c76b0104.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/twitcher-project/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/RegistrationForm.css": "/twitcher-project/static/media/register-splash.f08356ec.jpg",
+    "static/media/Home.css": "/twitcher-project/static/media/witcher-splash.0546109b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66422fb8.js",
+    "static/css/2.b4b72dba.chunk.css",
+    "static/js/2.c76b0104.chunk.js",
+    "static/css/main.c95aa0cb.chunk.css",
+    "static/js/main.bb6dc401.chunk.js"
+  ]
+}
