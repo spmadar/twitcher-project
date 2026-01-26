@@ -45,6 +45,6 @@
   ],
   "devDependencies": {
     "@types/node": "^13.7.1",
-    "dependency-cruiser": "^8.0.1"
+    "dependency-cruiser": "^17.3.7"
   }
 }
